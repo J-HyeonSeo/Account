@@ -13,7 +13,7 @@
 ## 계좌 API
 
 - (POST) /account : 계좌를 개설합니다.
-```
+```json
 (example)
 Request Header :
 {
@@ -35,7 +35,7 @@ Response Body :
 ```
 
 - (GET) /account?user_id= : user_id가 소유한 계좌들을 조회합니다.
-```
+```json
 (example)
 
 Response Body:
@@ -45,7 +45,7 @@ Response Body:
 }
 ```
 - (DELETE) /account : 계좌를 해지합니다.
-```
+```json
 (example)
 
 Request Header:
@@ -70,7 +70,7 @@ Response Body:
 ## 거래 API
 
 - (POST) /transaction/use : 거래를 발생시킵니다.
-```
+```json
 (example)
 
 Request Header:
@@ -95,7 +95,7 @@ Response Body:
 }
 ```
 - (POST) /transaction/cancel : 발생된 거래를 취소합니다.
-```
+```json
 Request Header:
 {
     'Content-Type' : 'application/json'
@@ -118,7 +118,7 @@ Response Body:
 }
 ```
 - (GET) transaction/{id} : id에 해당되는 transaction을 조회합니다.
-```
+```json
 Response Body:
 {
     'transactionType': 'CANCEL', 
